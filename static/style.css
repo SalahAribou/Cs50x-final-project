@@ -1,0 +1,129 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #264653;
+    color: #e9c46a;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #f4a261;
+    font-size: 2.5rem;
+}
+
+#task-form {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#task-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #2a9d8f;
+    border-radius: 6px;
+    background: #fff;
+    color: #264653;
+}
+
+.priority-select {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #e9c46a; 
+}
+
+.priority-select label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#task-form button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quadrant {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 200px; 
+}
+
+#completed-section {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+#quadrant-1 { border: 2px solid #e76f51; }
+#quadrant-2 { border: 2px solid #2a9d8f; }
+#quadrant-3 { border: 2px solid #e9c46a; }
+#quadrant-4 { border: 2px solid #f4a261; }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+li {
+    padding: 10px;
+    margin: 6px 0;
+    background-color: #264653;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+li.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    background-color: #2a9d8f40;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2a9d8f;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: none;
+}

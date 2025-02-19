@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisenhower Matrix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Eisenhower Matrix</h1>
+    </header>
+    
+    <main>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <div class="priority-select">
+                <label>
+                    <input type="checkbox" id="urgent-check"> Urgent
+                </label>
+                <label>
+                    <input type="checkbox" id="important-check"> Important
+                </label>
+            </div>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="matrix">
+            <section id="quadrant-1" class="quadrant">
+                <h2>Urgent & Important</h2>
+                <ul id="do-first"></ul>
+            </section>
+            <section id="quadrant-2" class="quadrant">
+                <h2>Important (Not Urgent)</h2>
+                <ul id="schedule"></ul>
+            </section>
+            <section id="quadrant-3" class="quadrant">
+                <h2>Urgent (Not Important)</h2>
+                <ul id="delegate"></ul>
+            </section>
+            <section id="quadrant-4" class="quadrant">
+                <h2>Not Urgent/Important</h2>
+                <ul id="eliminate"></ul>
+            </section>
+        </div>
+        <section id="completed-section">
+            <h2>Completed Tasks</h2>
+            <ul id="completed-list"></ul>
+        </section>
+    </main>
+
+    <button id="back-to-top">↑</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body> 
+</html>
