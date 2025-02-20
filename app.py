@@ -3,14 +3,11 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-
 tasks = []
 current_id = 0b
-
 @app.route('/')
 def index():
     return render_template('index.html')
-
 @app.route('/add_task', methods=['POST'])
 def add_task():
     global current_id
